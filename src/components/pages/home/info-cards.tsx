@@ -5,6 +5,7 @@ import {
   Location09Icon,
   Mortarboard02Icon,
 } from "@hugeicons/core-free-icons";
+import SocialLinks from "./social-links";
 
 type HugeIcon = typeof CodeXmlIcon;
 
@@ -20,20 +21,24 @@ const infoCardsData: TInfoCardData[] = [
     icon: CodeXmlIcon,
     title: "Full-Stack Developer",
     className:
-      "translate-x-75 -translate-y-20 [transform:rotateY(-22deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
+      "translate-x-75 -translate-y-35 [transform:rotateY(-22deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
   },
   {
     icon: Location09Icon,
     title: "Lalitpur, Nepal",
-    className: "-translate-x-50 -translate-y-50 [transform:rotateY(15deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
+    className:
+      "-translate-x-50 -translate-y-50 [transform:rotateY(15deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
   },
   {
     icon: Mortarboard02Icon,
     title: "Bsc. (Hons) in Computer Science",
     description: "@Herald College Kathmandu",
-    className: "-translate-x-80 translate-y-5 [transform:rotateY(20deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
+    className:
+      "-translate-x-80 translate-y-5 [transform:rotateY(20deg)] hover:[transform:rotateY(0deg)] shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)]",
   },
 ];
+
+
 
 const InfoCards = () => {
   return (
@@ -41,9 +46,7 @@ const InfoCards = () => {
       {infoCardsData.map((card, index) => (
         <Card
           key={index}
-          parentClassName={`absolute transition-all
-      duration-500
-      ease-out ${card.className}`}
+          parentClassName={`absolute transition-all duration-500 ease-out ${card.className}`}
           className="flex gap-2"
         >
           <HugeiconsIcon
@@ -59,6 +62,9 @@ const InfoCards = () => {
           </div>
         </Card>
       ))}
+
+      <SocialLinks />
+     
     </>
   );
 };
